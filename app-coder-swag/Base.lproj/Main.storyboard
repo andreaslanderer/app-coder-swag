@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -31,35 +30,37 @@
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-pZ-HHC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2zT-pZ-HHC">
                                 <rect key="frame" x="0.0" y="55" width="375" height="548"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Suh-yC-QlT" customClass="CategoryCellTableViewCell" customModule="app_coder_swag" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="150" id="Suh-yC-QlT" customClass="CategoryCellTableViewCell" customModule="app_coder_swag" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Suh-yC-QlT" id="75n-sG-v1l">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="DQc-8g-LQd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                    <rect key="frame" x="0.0" y="3" width="375" height="143.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="143.5" id="qJP-JH-AL1"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIGITAL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V5m-aS-GSv">
-                                                    <rect key="frame" x="15" y="60.5" width="345" height="27.5"/>
+                                                    <rect key="frame" x="149.5" y="61.5" width="76.5" height="27.5"/>
                                                     <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="DQc-8g-LQd" secondAttribute="trailing" id="97Z-Ko-mcJ"/>
-                                                <constraint firstAttribute="bottom" secondItem="DQc-8g-LQd" secondAttribute="bottom" id="GDK-dE-3SY"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="V5m-aS-GSv" secondAttribute="trailing" id="Zec-DK-9PR"/>
-                                                <constraint firstItem="DQc-8g-LQd" firstAttribute="top" secondItem="75n-sG-v1l" secondAttribute="top" id="exk-dY-wJj"/>
-                                                <constraint firstItem="DQc-8g-LQd" firstAttribute="leading" secondItem="75n-sG-v1l" secondAttribute="leading" id="mh8-1C-Gur"/>
-                                                <constraint firstItem="V5m-aS-GSv" firstAttribute="centerY" secondItem="75n-sG-v1l" secondAttribute="centerY" id="mq7-hb-Ea8"/>
-                                                <constraint firstItem="V5m-aS-GSv" firstAttribute="leading" secondItem="75n-sG-v1l" secondAttribute="leadingMargin" id="ypT-RS-kog"/>
+                                                <constraint firstItem="V5m-aS-GSv" firstAttribute="centerX" secondItem="75n-sG-v1l" secondAttribute="centerX" id="QBk-sj-u1F"/>
+                                                <constraint firstItem="DQc-8g-LQd" firstAttribute="top" secondItem="75n-sG-v1l" secondAttribute="top" constant="3" id="VvJ-Le-ODL"/>
+                                                <constraint firstItem="V5m-aS-GSv" firstAttribute="centerY" secondItem="75n-sG-v1l" secondAttribute="centerY" id="Vvk-98-72s"/>
+                                                <constraint firstAttribute="trailing" secondItem="DQc-8g-LQd" secondAttribute="trailing" id="aAV-mz-CAe"/>
+                                                <constraint firstItem="DQc-8g-LQd" firstAttribute="leading" secondItem="75n-sG-v1l" secondAttribute="leading" id="pgJ-DL-cJF"/>
+                                                <constraint firstAttribute="bottom" secondItem="DQc-8g-LQd" secondAttribute="bottom" constant="3" id="ywT-ED-cfR"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
